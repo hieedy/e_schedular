@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invited to a Meeting link</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./css/createNewLink.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="./css/InviteLink.css">
+</head>
+<body>
+
+    <div id="major-container">
+
+        <div id="inviteLinkContainer">
+
+            <div id="inviteLinkAdminContainer">
+                <p class="adminUserName"> {Admin UserName} </p>
+                <h4 class="meetingAgenda"> {Meeting Agenda} </h4>
+            </div>
+            <hr>
+    
+            <div id="inviteLinkCalender">
+
+                <div class="chooseDateForm" > 
+                        <form>
+                            <label for="selectDate">Select Date</label>
+                            <input type="form-control" type="datetime-local" placeholder="Select Date" name="selectDate" id="selectDate">
+                        </form>
+                </div>
+    
+
+                <div class="chooseTimeForm" >
+                    <form>
+                        <label for="selectTime">Select Time</label>
+                        <select class="form-control selectpicker bookTimeSlots" title="Choose Time Slots"
+                        id="selectTime">
+                            <option value="12:00 am - 12:30 am">12:00 am - 12:30 am</option>
+                            <option value="12:30 am - 1:00 am">12:30 am - 1:00 am</option>
+                            <option value="1:00 am - 1:30 am">1:00 am - 1:30 am</option>
+                            <option value="1:30 am - 2:00 am">1:30 am - 2:00 am</option>
+                            <option value="2:00 am - 2:30 am">2:00 am - 2:30 am</option>
+                            <option value="2:30 am - 3:00 am">2:30 am - 3:00 am</option>
+                            <option value="3:00 am - 3:30 am">3:00 am - 3:30 am</option>
+                            <option value="3:30 am - 4:00 am">3:30 am - 4:00 am</option>
+                            <option value="4:00 am - 4:30 am">4:00 am - 4:30 am</option>
+                            <option value="4:30 am - 5:00 am">4:30 am - 5:00 am</option>
+                            <option value="4:00 am - 4:30 am">4:00 am - 4:30 am</option>
+                            <option value="4:30 am - 5:00 am">4:30 am - 5:00 am</option>
+                            <option value="5:00 am - 5:30 am">5:00 am - 5:30 am</option>
+                            <option value="5:30 am - 6:00 am">5:30 am - 6:00 am</option>
+                            <option value="6:00 am - 6:30 am">6:00 am - 6:30 am</option>
+                            <option value="6:30 am - 7:00 am">6:30 am - 7:00 am</option>
+                            <option value="7:00 am - 7:30 am">7:00 am - 7:30 am</option>
+                            <option value="7:30 am - 8:00 am">7:30 am - 8:00 am</option>
+                            <option value="8:00 am - 8:30 am">8:00 am - 8:30 am</option>
+                            <option value="8:30 am - 9:00 am">8:30 am - 9:00 am</option>
+                            <option value="9:00 am - 9:30 am">9:00 am - 9:30 am</option>
+                            <option value="9:30 am - 10:00 am">9:30 am - 10:00 am</option>
+                            <option value="10:00 am - 10:30 am">10:00 am - 10:30 am</option>
+                            <option value="10:30 am - 11:00 am">10:30 am - 11:00 am</option>
+                            <option value="11:00 am - 11:30 am">11:00 am - 11:30 am</option>
+                            <option value="11:30 am - 12:00 pm">11:30 am - 12:00 pm</option>
+        
+                            <option value="12:00 am - 12:30 am">12:00 pm - 12:30 pm</option>
+                            <option value="12:30 am - 1:00 am">12:30 pm - 1:00 pm</option>
+                            <option value="1:00 am - 1:30 am">1:00 pm - 1:30 pm</option>
+                            <option value="1:30 am - 2:00 am">1:30 pm - 2:00 pm</option>
+                            <option value="2:00 am - 2:30 am">2:00 pm - 2:30 pm</option>
+                            <option value="2:30 am - 3:00 am">2:30 pm - 3:00 pm</option>
+                            <option value="3:00 am - 3:30 am">3:00 pm - 3:30 pm</option>
+                            <option value="3:30 am - 4:00 am">3:30 pm - 4:00 pm</option>
+                            <option value="4:30 am - 5:00 am">4:30 pm - 5:00 pm</option>
+                            <option value="4:00 am - 4:30 am">4:00 pm - 4:30 pm</option>
+                            <option value="4:30 am - 5:00 am">4:30 pm - 5:00 pm</option>
+                            <option value="5:00 am - 5:30 am">5:00 pm - 5:30 pm</option>
+                            <option value="5:30 am - 6:00 am">5:30 pm - 6:00 pm</option>
+                            <option value="6:00 am - 6:30 am">6:00 pm - 6:30 pm</option>
+                            <option value="6:30 am - 7:00 am">6:30 pm - 7:00 pm</option>
+                            <option value="7:00 am - 7:30 am">7:00 pm - 7:30 pm</option>
+                            <option value="7:30 am - 8:00 am">7:30 pm - 8:00 pm</option>
+                            <option value="8:00 am - 8:30 am">8:00 pm - 8:30 pm</option>
+                            <option value="8:30 am - 9:00 am">8:30 pm - 9:00 pm</option>
+                            <option value="9:00 am - 9:30 am">9:00 pm - 9:30 pm</option>
+                            <option value="9:30 am - 10:00 am">9:30 pm - 10:00 pm</option>
+                            <option value="10:00 am - 10:30 am">10:00 pm - 10:30 pm</option>
+                            <option value="10:30 am - 11:00 am">10:30 pm - 11:00 pm</option>
+                            <option value="11:00 am - 11:30 am">11:00 pm - 11:30 pm</option>
+                            <option value="11:30 am - 12:00 pm">11:30 pm - 12:00 am</option> 
+                        </select>
+                    </form>
+                 </div>
+    
+            </div>
+    
+            <div id="attendeeDetails">
+                <form>
+                    <div id="attendeeNameOnInviteLinkContainer">
+                        <label for="attendeeNameOnInviteLink">Name</label>
+                        <input type="text" name="attendeeNameOnInviteLink" id="attendeeNameOnInviteLink" class="inputSytle">
+                    </div>
+                    
+    
+                    <div id="attendeeEmailOnInviteLinkContainer">
+                        <label for="attendeeEmailOnInviteLink">Email</label>
+                        <input type="email" name="attendeeEmailOnInviteLink" id="attendeeEmailOnInviteLink" class="inputSytle">
+                    </div>
+    
+                    <div id="meetingNotesByAttendeContainer">
+                        <label for="meetingNotesByAttendee">Please share anything that will help prepare for our meeting.</label>
+                        <textarea name="meetingNotesByAttendee" id="meetingNotesByAttendee" cols="50" rows="5" class="inputSytle"></textarea>
+                    </div>
+
+                    <div id="scheduleMeetingContainer"> 
+                        <input type="submit" value="Schedule" class="scheduleMeetingBtn"/>
+
+                    </div>
+    
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#selectDate", {});
+
+    </script>
+    <script src="https://kit.fontawesome.com/76555bc776.js" crossorigin="anonymous"></script>
+</body>
+</html>

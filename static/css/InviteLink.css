@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#major-container {
+    width: 100%;
+    height: 100;
+    display: flex;
+    justify-content: center;
+}
+
+#inviteLinkContainer {
+    padding: 40px;
+    margin: 20px;
+    border-radius: 5px;
+    width: 650px;
+    height: 0 auto;
+    box-shadow: 0px 12px 28px -4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 12px 28px -4px rgba(0, 0, 0, 0.5);
+}
+
+#inviteLinkAdminContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+#inviteLinkCalender {
+    padding: 10px;
+    /* border: 4px solid red; */
+}
+
+
+.chooseDateForm {
+    /* border: 2px solid red; */
+    padding: 15px;
+}
+
+.chooseDateForm input {
+    position: relative;
+    cursor: text;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 16px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #d6d6e7;
+    border-radius: 3px;
+    color: rgb(35, 38, 59);
+    box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
+    overflow: hidden;
+    transition: all 100ms ease-in-out;
+    
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.chooseTimeForm {
+    /* border: 2px solid red; */
+    padding: 15px;
+}
+
+.chooseTimeForm label {
+    padding-bottom: 5px;
+}
+
+#attendeeDetails {
+    padding: 15px;
+}
+
+#attendeeNameOnInviteLinkContainer, #attendeeEmailOnInviteLinkContainer, #meetingNotesByAttendeContainer {
+
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+.inputSytle {
+    
+    
+    padding: 0 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+    width: 100%;
+    min-height: 36px;
+    background-color: #ffffff;
+    border: 1px solid rgba(36,28,21,0.3);
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.inputSytle :focus{
+    outline: none;
+    border: 1px solid #007c89;
+    box-shadow: inset 0 0 0 1px #007c89;
+}
+
+#scheduleMeetingContainer {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.scheduleMeetingBtn {
+    
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #0070f3;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+    
+    
+}
+
+.scheduleMeetingBtn:hover{
+    background: rgba(0,118,255,0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}

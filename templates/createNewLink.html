@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}    
+    
+    <title>Build your own Meeting Link</title>
+    <!-- Google Fonts -->
+ {% endblock %}   
+
+
+ {% block css %}
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'css/createNewLink.css' %}">
+ 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+ ">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+ 
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+{% endblock %}
+
+
+ 
+{% block body %}
+<body>
+    <div class="createNewLinkContainer">
+        <div id="topBar">
+            <i class="handshakeIcon fa-regular fa-handshake "></i>
+            <h3>Create your Meeting Link</h3>
+            <a href="{% url 'dashboard' %}"><i class="fa-solid fa-xmark crossIcon"> </i></a>
+        </div>
+
+        <div id="main-creating-link-container">
+               
+            <div id="pickTimreContainer">
+                <form method='POST' enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <h2> Choose your dates </h2>
+                        <input type="date" name="calendar_dates" class = "form-control">
+                     <h2>Select Time Slots</h2>
+                
+                    <select class="form-control selectpicker bookTimeSlots" multiple data-live-search="true" title="Choose Time Slots"
+                    name="timeslots">
+                        {% for time_val in time_values%}
+                            <option value="{{forloop.counter0}}">{{time_val}}</option>
+                        {% endfor %}
+                    </select>
+                
+
+            <div id="meetingDetails">
+                <div id="meetingDetailsHeading"> 
+                <h3>Meeting Details</h3>    
+                
+                
+                    <div id="meetingNameContainer">
+                        <label for="meetingName" id="meetingNameLabel"> Meeting Agenda</label>
+                        <input type="text" name="meetingName" id="meetingName" placeholder="Enter Meeting Name">
+                    </div>
+
+                    <div id="submitContainer">
+                        <input type="submit" name="submitBtn" id="submitBtn" title="Create">
+                    </div>
+                    
+                
+            </div>
+
+        </div>
+        </form>
+        </div>
+    </div>
+
+    {% block jsscript %}
+<script src="https://kit.fontawesome.com/76555bc776.js" crossorigin="anonymous"></script>
+ 
+    {% if isPosted %}
+        <script>
+            console.log("Hello ji done hogya")
+        </script>
+    {% endif %}
+
+
+<script>
+        flatpickr("input[type=date]", { mode: "multiple", dateFormat: "Y-m-d"})
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script> -->
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+{% endblock %}
+    
+</body>
+
+{% endblock %}
+
+

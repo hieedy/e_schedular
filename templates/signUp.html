@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title> Sign Up </title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/signInPage.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% endblock %}
+
+
+{% block body %}
+<body>
+
+    
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container login-container">
+   
+            <div class="row">
+                
+                <div class="col login-form-2">
+                    <h3>Sign Up</h3>
+                    
+                    <form action='' method='POST' enctype='multipart/form-data'>
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name" value=""  name = "first_name" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name " value="" name = "last_name" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Gmail Id" value="" name = "emailid" required/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" value="" name="password" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-select chooseGender" aria-label="Default select example" name="gender" required >
+                                <option selected value="">Choose Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group btnGroup">
+                            <input type="submit" class="btnSubmit" value="Create Account" />
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+</body>
+{% endblock %}
+{% block jsscript %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
